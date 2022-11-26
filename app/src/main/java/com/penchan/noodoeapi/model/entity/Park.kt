@@ -1,0 +1,32 @@
+package com.penchan.noodoeapi.model.entity
+
+data class Park(
+    val AED_Equipment: String,
+    val Accessibility_Elevator: String,
+    val CellSignal_Enhancement: String,
+    val ChargingStation: String,
+    val Child_Pickup_Area: String,
+    val EntranceCoord: EntranceCoord,
+    val FareInfo: FareInfo,
+    val Handicap_First: String,
+    val Phone_Charge: String,
+    val Pregnancy_First: String,
+    val Taxi_OneHR_Free: String,
+    val address: String,
+    val area: String,
+    val id: String,
+    val name: String,
+    val payex: String,
+    val serviceTime: String,
+    val summary: String,
+    val tel: String,
+    val totalbike: Int,
+    val totalbus: Int,
+    val totalcar: Int,
+    val totallargemotor: String,
+    val totalmotor: Int,
+    val tw97x: String,
+    val tw97y: String,
+    val type: String,
+    val type2: String
+)

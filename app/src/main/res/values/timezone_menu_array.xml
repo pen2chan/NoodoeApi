@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="filter_timezone_taiwan">台灣</string>
+    <string name="filter_timezone_japan">日本</string>
+    <string name="filter_timezone_america">美國</string>
+    <string name="filter_timezone_england">英國</string>
+    <string name="filter_timezone_france">法國</string>
+    <string name="filter_timezone_germany">德國</string>
+    <string name="filter_timezone_italy">義大利</string>
+    <string name="filter_timezone_rusia">俄國</string>
+    <string name="filter_timezone_netherland">荷蘭</string>
+
+    <string-array name="timezone_menu_array">
+        <item>@string/filter_timezone_taiwan</item>
+        <item>@string/filter_timezone_japan</item>
+        <item>@string/filter_timezone_america</item>
+        <item>@string/filter_timezone_england</item>
+        <item>@string/filter_timezone_france</item>
+        <item>@string/filter_timezone_germany</item>
+        <item>@string/filter_timezone_italy</item>
+        <item>@string/filter_timezone_rusia</item>
+        <item>@string/filter_timezone_netherland</item>
+    </string-array>
+</resources>
