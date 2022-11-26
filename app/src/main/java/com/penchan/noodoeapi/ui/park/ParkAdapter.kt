@@ -30,9 +30,31 @@ class ParkAdapter : RecyclerView.Adapter<ParkAdapter.ParkViewHolder>() {
         holder.binding.textName.text = list[position].name
         holder.binding.textAddress.text = list[position].address
         holder.binding.textTotal.text = list[position].totalcar.toString()
-        holder.binding.textAvailable.text = list[position].availablecar.toString()
-        holder.binding.textCharge.text = list[position].charging.toString()
-        holder.binding.textIdle.text = list[position].freecharge.toString()
+
+        if (list[position].availablecar == -1) {
+            holder.binding.textAvailable.text = "Unknown"
+            holder.binding.textCharge.text = "Unknown"
+            holder.binding.textIdle.text = "Unknown"
+        } else {
+            holder.binding.textAvailable.text = list[position].availablecar.toString()
+            if (list[position].charging < 0 && list[position].freecharge < 0) {
+                list[position].scoketStatusList?.let {
+                    var charge = 0
+                    var idle = 0
+                    it.forEach {
+                        if (it.spot_status.equals("充電中")) {
+                            charge++
+                        } else {
+                            idle++
+                        }
+                    }
+                    list[position].charging = charge
+                    list[position].freecharge = idle
+                }
+            }
+            holder.binding.textCharge.text = list[position].charging.toString()
+            holder.binding.textIdle.text = list[position].freecharge.toString()
+        }
     }
 
     override fun getItemCount(): Int {

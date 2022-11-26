@@ -59,25 +59,11 @@ class ParkViewModel(
             parkLotInfo.name = it.name
             parkLotInfo.totalcar = it.totalcar
 
-            if (availablePark == null) {
-                parkLotInfo.availablecar = -1
-                parkLotInfo.charging = 0
-                parkLotInfo.freecharge = 0
-            } else {
+            if (availablePark != null) {
                 parkLotInfo.availablecar = availablePark.availablecar
-                val socketStatusList = availablePark.ChargeStation?.scoketStatusList
-                socketStatusList?.let {
-                    var charge = 0
-                    var idle = 0
-                    it.forEach {
-                        if (it.spot_status.equals("充電中")) {
-                            charge++
-                        } else {
-                            idle++
-                        }
-                    }
-                    parkLotInfo.charging = charge
-                    parkLotInfo.freecharge = idle
+
+                if (availablePark.ChargeStation != null) {
+                    parkLotInfo.scoketStatusList = availablePark.ChargeStation.scoketStatusList
                 }
             }
             list.add(parkLotInfo)

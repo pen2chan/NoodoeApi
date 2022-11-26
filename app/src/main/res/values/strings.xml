@@ -8,6 +8,14 @@
     <string name="string_password">Password</string>
     <string name="string_login">登入</string>
 
+    <string name="title_id">ID:</string>
+    <string name="title_name">NAME:</string>
+    <string name="title_address">ADDRESS:</string>
+    <string name="title_total">總車位:</string>
+    <string name="title_available">剩餘車位:</string>
+    <string name="title_charge">充電中總數:</string>
+    <string name="title_idle">待機中總數:</string>
+
     <string name="label_park">台北市停車場資訊</string>
     <string name="label_user">使用者資料</string>
 
